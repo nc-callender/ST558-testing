@@ -27,7 +27,7 @@ library(ggplot2)
 
 ```{r, cache=TRUE}
 
-vaccine_API <- fromJSON("https://data.cdc.gov/resource/ee48-w5t6.json?$limit=5000") %>% as_tibble
+vaccine_API <- fromJSON("https://data.cdc.gov/resource/ee48-w5t6.json?$limit=2000") %>% as_tibble
 
 #Verify the number of rows is less than 50000 (that the limit was sufficient to retrieve the complete dataset).
 
