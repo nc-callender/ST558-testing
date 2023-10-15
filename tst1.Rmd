@@ -1,0 +1,39 @@
+---
+title: "Testing dfs"
+author: "Yvette Callender"
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, eval= FALSE, echo=FALSE}
+#   Code to Create this Document
+c
+
+```
+# Packages used in this project
+
+```{r, message=FALSE}
+library(tidyverse)
+library(jsonlite)
+library(ggplot2)
+
+```
+
+
+
+```{r, cache=TRUE}
+
+vaccine_API <- fromJSON("https://data.cdc.gov/resource/ee48-w5t6.json?$limit=5000") %>% as_tibble
+
+#Verify the number of rows is less than 50000 (that the limit was sufficient to retrieve the complete dataset).
+
+nrow(vaccine_API)
+vaccine_API
+knitr::kable(vaccine_API)
+```
+
+
